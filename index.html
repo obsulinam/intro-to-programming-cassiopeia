@@ -1,73 +1,102 @@
 <!DOCTYPE html>
 <html>
-  <head>
-		<title>portfolio</title>
-		<meta charset="UTF-8">
-		<meta name="author" content="Obsuliman Leyva">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Obsuliman portfolio">
-		<style>
-			p {
-				font-size: 20px;
-			}
-		</style>
-	</head>
-	<body background="img.jpg/R8.png"text="#ffffff"font-size:>
-		<img src="img.jpg/leyva.jpeg"width ="20%"alt="Photo de obsuliman en su auto">
-		<h3>Obsuliman Leyva</h1>
-		<section style="background-color:black ;opacity: .8">
-			<h1>About :</h1>
-			<p>Hi, I'm Obsuliman! 
-			But you can call me Suli. 
-			I am a student at Code The Dream School. I have as a plan to reach all possible goals in this course in order to try to continue in the next courses. I would like to become a good developer one day, and be able to work in a good work environment and thus also be able to contribute to the developer community.</p>
-			<h3>More about me :</h3>
-			<p>I have two beautiful daughters. I like nature and everything ecological, I have a passion for electric cars, I think they are the future, I would like to visit the wonderful landscapes of Alaska in a not too distant moment, I love programming while enjoying a coffee in <a href="https://www.panerabread.com"target="_blank"rel="noopener noreferrer">Panera Bread</a> where I managed to find great concentration even if it doesn't seem like it.</p>
-		</section>
-		<section style="background-color:black;opacity: .8">
-			<h1>Experience :</h1>
-			<p>My first steps in programming were through Free Code Camp, there I took the JavaScript course on algorithm and data structures. I have also acquired knowledge in online tutorials and sites like Khan Academy which have helped me understand more programming concepts contributing greatly to my experience.</p>
-		</section>
-		<section id="skills" style="background-color:black;opacity: .8">
-			<h2>Skills :</h2>
-			<ul>
 
-			</ul>
+<head>
+	<title>portfolio</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="author" content="Obsuliman Leyva">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Obsuliman portfolio">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body >
+	<img class="imgdperfil" src="img.jpg/leyva.jpeg" width="20%" alt="Photo de obsuliman en su auto"> 
+	<!--<a href="#msj_box">mensaje</a>-->
+	<h1 class="nombre">Obsuliman Leyva</h1>
+	<div class="opacity">
+		<section class="a">
+			
+			<h1>About :</h1>
+			<p>Hi, I'm Obsuliman!
+				But you can call me Suli.
+				I am a student at Code The Dream School. I have as a plan to reach all possible goals in this course in
+				order to try to continue in the next courses. I would like to become a good developer one day, and be
+				able to work in a good work environment and this also be able to contribute to the developer community.
+			</p>
+			<h3>More about me:</h3>
+			<p>I have two beautiful daughters. I like nature and everything ecological, I have a passion for electric
+				cars, I think they are the future, I would like to visit the wonderful landscapes of Alaska in a not too
+				distant moment, I love programming while enjoying a coffee in <a href="https://www.panerabread.com"
+					target="_blank" rel="noopener noreferrer">Panera Bread</a> where I managed to find great
+				concentration even if it doesn't seem like it.</p>
 		</section>
-		<section style="background-color:black;opacity: .8">
+		<section class="b">
+			<h1>Experience :</h1>
+			<p>My first steps in programming were through Free Code Camp, there I took the JavaScript course on
+				algorithm and data structures. I have also acquired knowledge in online tutorials and sites like Khan
+				Academy which have helped me understand more programming concepts contributing greatly to my experience.
+			</p>
+		</section>
+		<section id="skills" class="c">
+			<h2>Skills :</h2>
+			
+			<div class="l">
+				<div>
+				<ul>
+				</ul>
+			</div>
+					<div class="link_class"><a href="https://skillicons.dev">
+					  <img src="https://skillicons.dev/icons?i=js,html,css,vscode,git,github" />
+					</a>
+					</div>
+				</div>
+		</section>
+		<section class="d">
 			<h1>Connect :</h1>
 			<h4>Contact me or know more about me</h4>
 			<ul>
-				<li>Facebook : <a href="https://www.facebook.com/obsuliman/"target="_blank"rel="noopener noreferrer">Obsuliman Leyva</a></li>
-				<li>Email : <a href="mailto:obsuliman@gmail.com?subject=Mail from our Website">obsuliman@gmail.com</a></li>
-				<li>GitHub : <a href="https://github.com/obsulinam"target="_blank"rel="noopener noreferrer">Obsulinam</a></li>
-			<ul>
+				<li>Facebook: <a href="https://www.facebook.com/obsuliman/" target="_blank"
+						rel="noopener noreferrer">Obsuliman Leyva</a></li>
+				<li>Email: <a href="mailto:obsuliman@gmail.com?subject=Mail from our Website">obsuliman@gmail.com</a>
+				</li>
+				<li>GitHub: <a href="https://github.com/obsulinam" target="_blank"
+						rel="noopener noreferrer">Obsulinam</a></li>
+				<ul>
 		</section>
-		<section style="background-color:black;opacity: .8">
-			<h2>Leave a Message :</h2>
+		<section id="msj_box" class="e">
+			<h2>Leave a Message:</h2>
 			<form name="leave_message" id="myform">
 				<div>
-					<label for="full_name">Full Name :</label><br/>
+					<label for="full_name">Full Name:</label><br/>
 					<input type="text" id="full_name" name="name" required="true" style="background-color:aqua">
 				</div>
-				<br/>
+				<br />
 				<div>
-					<label for="email_address" >Email Address :</label><br/>
+					<label for="email_address">Email Address:</label><br />
 					<input type="email" id="email_address" name="email" required="true" style="background-color:aqua">
 				</div>
-				<br/>
+				<br />
 				<div>
-					<label for="enter_message">Enter Message :</label><br/>
-					<textarea style="background-color:aqua" id="enter_message" name="message" required="true" rows="10" cols="50"></textarea><br/>
-					<button type="submit">Submit</button>
+					<label for="enter_message">Enter Message:</label><br />
+					<textarea style="background-color:aqua" id="enter_message" name="message" required="true" rows="5"
+						cols="50"></textarea><br />
+					<button id= btsubmit type="submit">Submit</button>
 				</div>
 			</form>
 		</section>
-		<section id="message" style="background-color:black;opacity: .8">
-			<h2>Messages :</h2>
+		<section id="message" style="background-color:black;opacity: .8" class="f">
+			<h2>Messages:</h2>
 			<ul></ul>
 		</section>
-		<footer></footer>
+	</div>
+		<footer class="footclr"></footer>
+	
 		<script src="js/index.js">
 		</script>
-	</body>
+</body>
+
 </html>

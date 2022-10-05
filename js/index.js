@@ -10,7 +10,7 @@ copyright.innerHTML = "Obsuliman " + thisYear + ".";
 
 footer.appendChild(copyright);
 
-let skills =["JavaScript","Html","CSS"];
+let skills =["JavaScript","Html","CSS","VSCode","Git","GitHub"];
 
 let skillsSection = document.getElementById("skills");
 
@@ -41,11 +41,12 @@ function submitFunction(event){
 
     let newMessage = document.createElement("li");
 
-    newMessage.innerHTML = '<a href="mailto:' + emailAddress + '">' + fullName +'</a>' + '<span>' + ' Wrote: ' + enterMessage + '</span> ' ;
+    newMessage.innerHTML = '<a href="mailto:' + emailAddress + '">' + fullName +'</a>' + '<span>' + ' --- Wrote: ' + enterMessage + '</span> ' ;
     const removeButton = document.createElement("button");
     removeButton.innerText = "remove";
 
-    removeButton.setAttribute("type", "button");
+    removeButton.setAttribute("type", "button",);
+    removeButton.setAttribute("class", "class_button_remove");
 
     removeButton.addEventListener("click",funcButtonRmv);
     newMessage.appendChild(removeButton);
