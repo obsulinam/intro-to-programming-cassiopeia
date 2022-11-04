@@ -62,24 +62,4 @@ function funcButtonRmv(event){
 
 messageForm.addEventListener("submit", submitFunction);
 
-let githubRequest = new XMLHttpRequest();
-githubRequest.open("GET", "https://api.github.com/users/obsulinam/repos");
-githubRequest.send();
-
-githubRequest.addEventListener('load', myCallbackFunction);
-let repositories = [];
-
-function myCallbackFunction(event) {
-    repositories = JSON.parse(this.response);
-    console.log(repositories);
-
-    let projectSection = document.getElementById("projects");
-    let projectList = projectSection.querySelector("ul");
-
-    for(let i = 0; i < repositories.length; i++){
-        let project = document.createElement("li");
-        project.innerText = repositories[i].name;
-        projectList.appendChild(project);
-    }
-}
 
