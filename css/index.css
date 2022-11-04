@@ -8,7 +8,7 @@ body {
     border-color: black;
     border-style: solid;
     border-width: 3px;
-    margin: 20px;
+    margin: 40px;
 }
 .nombre{
     margin-left: 40px;
@@ -99,3 +99,57 @@ textarea {
     margin-top: 32px;
     margin-left: 60px;
 }
+.menu {
+    background-color: black;
+    border-radius: 10px;
+    opacity: .8;
+    margin: 10px 10px 10px 300px;
+    padding: 15px;
+    
+}
+.menu a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family:  'Courgette', cursive;
+    margin: 20px;
+    padding: 7px;
+    color: chartreuse;
+
+}
+.menu a:hover {
+    background: chocolate;
+   }
+   header {
+    position: fixed;
+    z-index: 9999;
+    margin: 20px;
+   }
+
+   @media screen and (max-width: 990px) {
+    .menu {
+        background-color: black;
+        border-radius: 10px;
+        opacity: .8;
+        margin: 10px 10px 10px 200px;
+        padding: 30px;
+        
+    }
+    .l {
+        display:block;
+    }
+    .link_class {
+        margin-top: 32px;
+        margin-left: 40px;
+    }
+    #enter_message {
+        width: 192px;
+        
+    }
+    #btsubmit {
+        margin-left: 130px;
+    }
+  }
+ 
+  .my_form {
+    flex-wrap: wrap;
+  }

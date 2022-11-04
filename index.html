@@ -14,27 +14,37 @@
 </head>
 
 <body >
+	<header>
+		<div class="menu">
+			<a href="#gj">About</a>
+			<a href="#h_experience">Experience</a>
+			<a href="#skills">Skills</a>
+			<a href="#h_connect">Connect</a>
+			<a href="#msj_box">Leave a message</a>
+			<a href="#message">Message</a>
+			
+		</div>
+	</header>
 	<img class="imgdperfil" src="img.jpg/leyva.jpeg" width="20%" alt="Photo de obsuliman en su auto"> 
-	<!--<a href="#msj_box">mensaje</a>-->
 	<h1 class="nombre">Obsuliman Leyva</h1>
 	<div class="opacity">
-		<section class="a">
+		<section class="a" id="h_abuot">
 			
-			<h1>About :</h1>
+			<h1 id="gj">About :</h1>
 			<p>Hi, I'm Obsuliman!
 				But you can call me Suli.
 				I am a student at Code The Dream School. I have as a plan to reach all possible goals in this course in
 				order to try to continue in the next courses. I would like to become a good developer one day, and be
 				able to work in a good work environment and this also be able to contribute to the developer community.
 			</p>
-			<h3>More about me:</h3>
+			<h3 id="moreab">More about me:</h3>
 			<p>I have two beautiful daughters. I like nature and everything ecological, I have a passion for electric
 				cars, I think they are the future, I would like to visit the wonderful landscapes of Alaska in a not too
 				distant moment, I love programming while enjoying a coffee in <a href="https://www.panerabread.com"
 					target="_blank" rel="noopener noreferrer">Panera Bread</a> where I managed to find great
 				concentration even if it doesn't seem like it.</p>
 		</section>
-		<section class="b">
+		<section class="b" id="h_experience">
 			<h1>Experience :</h1>
 			<p>My first steps in programming were through Free Code Camp, there I took the JavaScript course on
 				algorithm and data structures. I have also acquired knowledge in online tutorials and sites like Khan
@@ -46,14 +56,14 @@
 			
 			<div class="l">
 				<div>
-				<ul>
-				</ul>
-			</div>
-					<div class="link_class"><a href="https://skillicons.dev">
+					<ul>
+					</ul>
+				</div>
+				<div class="link_class"><a href="https://skillicons.dev">
 					  <img src="https://skillicons.dev/icons?i=js,html,css,vscode,git,github" />
 					</a>
-					</div>
 				</div>
+			</div>
 		</section>
 		<section id="projects" class="h">
 			<h2>Projects :</h2>
@@ -75,25 +85,27 @@
 		<section id="msj_box" class="e">
 			<h2>Leave a Message:</h2>
 			<form name="leave_message" id="myform">
-				<div>
-					<label for="full_name">Full Name:</label><br/>
-					<input type="text" id="full_name" name="name" required="true" style="background-color:aqua">
-				</div>
-				<br />
-				<div>
-					<label for="email_address">Email Address:</label><br />
-					<input type="email" id="email_address" name="email" required="true" style="background-color:aqua">
-				</div>
-				<br />
-				<div>
-					<label for="enter_message">Enter Message:</label><br />
-					<textarea style="background-color:aqua" id="enter_message" name="message" required="true" rows="5"
-						cols="50"></textarea><br />
-					<button id= btsubmit type="submit">Submit</button>
+				<div class="my_form">
+					<div>
+						<label for="full_name">Full Name:</label><br/>
+						<input type="text" id="full_name" name="name" required="true" style="background-color:aqua">
+					</div>
+					<br/>
+					<div>
+						<label for="email_address">Email Address:</label><br />
+						<input type="email" id="email_address" name="email" required="true" style="background-color:aqua">
+					</div>
+					<br />
+					<div>
+						<label for="enter_message">Enter Message:</label><br />
+						<textarea style="background-color:aqua" id="enter_message" name="message" required="true" rows="5"
+							cols="50"></textarea><br />
+						<button id= btsubmit type="submit">Submit</button>
+					</div>
 				</div>
 			</form>
 		</section>
-		<section id="message" style="background-color:black;opacity: .8" class="f">
+		<section id="message" class="f">
 			<h2>Messages:</h2>
 			<ul></ul>
 		</section>
