@@ -6,7 +6,7 @@ let footer = document.querySelector("footer");
 
 let copyright = document.createElement("p");
 
-copyright.innerHTML = "Obsuliman " + thisYear + ".";
+copyright.innerHTML = "© " + "Obsuliman " + thisYear + ".";
 
 footer.appendChild(copyright);
 
@@ -62,15 +62,9 @@ function funcButtonRmv(event){
 
 messageForm.addEventListener("submit", submitFunction);
 
-let githubRequest = new XMLHttpRequest();
-githubRequest.open("GET", "https://api.github.com/users/obsulinam/repos");
-githubRequest.send();
-
-githubRequest.addEventListener('load', myCallbackFunction);
 let repositories = [];
 
-function myCallbackFunction(event) {
-    repositories = JSON.parse(this.response);
+function myCallbackFunction(repositories) {
     console.log(repositories);
 
     let projectSection = document.getElementById("projects");
@@ -82,4 +76,8 @@ function myCallbackFunction(event) {
         projectList.appendChild(project);
     }
 }
+
+fetch("https://api.github.com/users/obsulinam/repos")
+    .then(response => response.json())
+    .then(data => myCallbackFunction(data));
 
