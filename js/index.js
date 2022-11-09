@@ -72,8 +72,9 @@ function myCallbackFunction(repositories) {
 
     for(let i = 0; i < repositories.length; i++){
         let project = document.createElement("li");
-        project.innerText = repositories[i].name;
+        project.innerHTML ="<a target='_blank' href=" + repositories[i].html_url + ">" + repositories[i].name + "</a>";
         projectList.appendChild(project);
+        
     }
 }
 
