@@ -84,25 +84,25 @@
 		</section>
 		<section id="msj_box" class="e">
 			<h2>Leave a Message:</h2>
-			<form name="leave_message" id="myform">
+			<form action="" method="post" name="leave_message" id="myform">
 				<div class="my_form">
-					<div>
+					
 						<label for="full_name">Full Name:</label><br/>
-						<input type="text" id="full_name" name="name" required="true" style="background-color:aqua">
-					</div>
+						<input type="text" id="full_name" name="name" required="true" placeholder="Bob...">
+					
 					<br/>
-					<div>
+					
 						<label for="email_address">Email Address:</label><br />
-						<input type="email" id="email_address" name="email" required="true" style="background-color:aqua">
-					</div>
+						<input type="email" id="email_address" name="email" required="true" placeholder="you@example.com">
+					
 					<br />
-					<div>
+					
 						<label for="enter_message">Enter Message:</label><br />
-						<textarea style="background-color:aqua" id="enter_message" name="message" required="true" rows="5"
-							cols="50"></textarea><br />
+						<textarea id="enter_message" name="message" required="true" rows="5"cols="50"  placeholder="Enter txt message here....."></textarea><br />
 						<button id= btsubmit type="submit">Submit</button>
-					</div>
+					
 				</div>
+				
 			</form>
 		</section>
 		<section id="message" class="f">

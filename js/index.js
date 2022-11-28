@@ -23,33 +23,47 @@ for(let i = 0; i < skills.length; i++){
 }
 
 const messageForm = document.getElementsByName("leave_message")[0];
-//const removeButton = document.createElement("button");
 
 function submitFunction(event){
+
     event.preventDefault();
-   let fullName = event.target.name.value;
+   let fullName =event.target.name.value;
    let emailAddress = event.target.email.value;
    let enterMessage =event.target.message.value;
 
-    console.log(fullName);
+    console.log(event.target.name.value);
     console.log(emailAddress);
     console.log(enterMessage);
 
-    let messageSection = document.getElementById("message");
-    
-    let messageList =messageSection.querySelector("ul");
+    function funcEditBtn(event){
+        const formRset = document.getElementById("myform");
+        formRset.name.value=fullName;
+        formRset.email.value= emailAddress;
+        formRset.message.value= enterMessage;
+        funcButtonRmv(event);
+       
+    }
 
+    let messageSection = document.getElementById("message");
+    let messageList =messageSection.querySelector("ul");
     let newMessage = document.createElement("li");
 
     newMessage.innerHTML = '<a href="mailto:' + emailAddress + '">' + fullName +'</a>' + '<span>' + ' --- Wrote: ' + enterMessage + '</span> ' ;
     const removeButton = document.createElement("button");
+    const editButton = document.createElement("button")
     removeButton.innerText = "remove";
+    editButton.innerText = "edit";
 
-    removeButton.setAttribute("type", "button",);
+    removeButton.setAttribute("type", "button");
     removeButton.setAttribute("class", "class_button_remove");
+    editButton.setAttribute("class","class_button_edit");
+    editButton.setAttribute("type","button");
 
     removeButton.addEventListener("click",funcButtonRmv);
+    editButton.addEventListener("click",funcEditBtn);
+
     newMessage.appendChild(removeButton);
+    newMessage.appendChild(editButton);
     messageList.appendChild(newMessage);
     document.getElementsByName("leave_message")[0].reset();
 }
@@ -59,6 +73,7 @@ function funcButtonRmv(event){
     let entry = removeButton.parentNode;
     entry.remove();
 }
+
 
 messageForm.addEventListener("submit", submitFunction);
 
@@ -72,13 +87,14 @@ function myCallbackFunction(repositories) {
 
     for(let i = 0; i < repositories.length; i++){
         let project = document.createElement("li");
-        project.innerHTML ="<a target='_blank' href=" + repositories[i].html_url + ">" + repositories[i].name + "</a>";
+        let projecDate = new Date(repositories[i].created_at)
+        project.innerHTML = repositories[i].description + " " + "<a target='_blank' href=" + repositories[i].html_url + ">" + repositories[i].name + "</a>" + " : " + projecDate + ".";
         projectList.appendChild(project);
-        
+       
     }
 }
-
 fetch("https://api.github.com/users/obsulinam/repos")
-    .then(response => response.json())
-    .then(data => myCallbackFunction(data));
+    .then((response) => response.json())
+    .then((data) => {myCallbackFunction(data)})
+    .catch(console.log('se cayo!: '));
 

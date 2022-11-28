@@ -73,6 +73,7 @@ textarea {
     border-radius: 6px;
     padding:auto;
     margin-left: 20px;
+    background-color:aqua;
 }
  #btsubmit {
     background-color:chocolate ;
@@ -84,7 +85,8 @@ textarea {
     margin-left: 350px;
     padding: 8px 20px 8px 20px;
 }
-.class_button_remove {
+.class_button_remove,
+.class_button_edit {
     background-color:chocolate ;
     color: white;
     border-color: blue;
